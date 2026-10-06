@@ -40,7 +40,7 @@ let selectedDesign = {
 
     days: 7,
 
-    image: "dresses.png"
+    image: "design/dresses.png"
 
 };
 
