@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Where Simple Meets Statement</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span class="logo-circle">S</span>
+
+            <div>
+                <h1>Where Simple Meets Statement</h1>
+                <p>Made for you. Made to fit.</p>
+            </div>
+        </div>
+
+        <a href="#order" class="header-button">
+            Start an Order
+        </a>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                CUSTOM CLOTHING
+            </p>
+
+            <h2>
+                Choose a design.<br>
+                Make it yours.
+            </h2>
+
+            <p class="hero-description">
+                Choose your favourite design, provide your measurements,
+                select your fabric and colour, and receive an estimated
+                price and completion time.
+            </p>
+
+            <a href="#designs" class="main-button">
+                Explore Designs
+            </a>
+
+        </div>
+
+
+        <div class="hero-steps">
+
+            <div>
+                <span>01</span>
+                <strong>Your measurements</strong>
+            </div>
+
+            <div>
+                <span>02</span>
+                <strong>Your fabric & colour</strong>
+            </div>
+
+            <div>
+                <span>03</span>
+                <strong>Your finished piece</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= DESIGNS ================= -->
+
+    <section class="section" id="designs">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="small-title">
+                    STEP 01
+                </p>
+
+                <h2>
+                    Choose your design
+                </h2>
+            </div>
+
+            <p>
+                Start with one of our sample styles.
+                Your final piece will be made to your measurements.
+            </p>
+
+        </div>
+
+
+
+        <div class="design-grid">
+
+
+            <!-- DESIGN 1 -->
+
+            <button
+                class="design-card selected"
+                data-design="Evening Dress"
+                data-price="65000"
+                data-days="7"
+                data-image="dresses.png"
+            >
+
+                <div class="design-image">
+
+                    <img
+                        src="dresses.png"
+                        alt="Burgundy evening dress"
+                    >
+
+                    <span class="selected-label">
+                        Selected
+                    </span>
+
+                </div>
+
+
+                <div class="design-information">
+
+                    <div>
+
+                        <h3>
+                            Evening Dress
+                        </h3>
+
+                        <p>
+                            Elegant fitted silhouette
+                        </p>
+
+                    </div>
+
+                    <span>
+                        From 65,000 XAF
+                    </span>
+
+                </div>
+
+            </button>
+
+
+
+            <!-- DESIGN 2 -->
+
+            <button
+                class="design-card"
+                data-design="African Print Jumpsuit"
+                data-price="70000"
+                data-days="8"
+                data-image="jumpsuits.png"
+            >
+
+                <div class="design-image">
+
+                    <img
+                        src="jumpsuits.png"
+                        alt="African print jumpsuit"
+                    >
+
+                    <span class="selected-label">
+                        Selected
+                    </span>
+
+                </div>
+
+
+                <div class="design-information">
+
+                    <div>
+
+                        <h3>
+                            African Print Jumpsuit
+                        </h3>
+
+                        <p>
+                            Statement print with tailored fit
+                        </p>
+
+                    </div>
+
+                    <span>
+                        From 70,000 XAF
+                    </span>
+
+                </div>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CUSTOMIZATION ================= -->
+
+    <section class="section customization" id="order">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="small-title">
+                    STEP 02
+                </p>
+
+                <h2>
+                    Make it yours
+                </h2>
+
+            </div>
+
+            <p>
+                Tell us how you want your garment made.
+            </p>
+
+        </div>
+
+
+
+        <div class="customization-layout">
+
+
+            <!-- ================= FORM ================= -->
+
+            <form id="orderForm">
+
+
+                <!-- MEASUREMENTS -->
+
+                <div class="form-section">
+
+                    <h3>
+                        Your measurements
+                    </h3>
+
+                    <p class="hint">
+                        Enter your measurements in centimetres.
+                    </p>
+
+
+                    <div class="measurement-grid">
+
+                        <label>
+                            Bust
+
+                            <input
+                                type="number"
+                                name="bust"
+                                placeholder="e.g. 92"
+                                required
+                            >
+                        </label>
+
+
+                        <label>
+                            Waist
+
+                            <input
+                                type="number"
+                                name="waist"
+                                placeholder="e.g. 76"
+                                required
+                            >
+                        </label>
+
+
+                        <label>
+                            Hips
+
+                            <input
+                                type="number"
+                                name="hips"
+                                placeholder="e.g. 102"
+                                required
+                            >
+                        </label>
+
+
+                        <label>
+                            Shoulder
+
+                            <input
+                                type="number"
+                                name="shoulder"
+                                placeholder="e.g. 38"
+                                required
+                            >
+                        </label>
+
+
+                        <label>
+                            Sleeve Length
+
+                            <input
+                                type="number"
+                                name="sleeve"
+                                placeholder="e.g. 60"
+                            >
+                        </label>
+
+
+                        <label>
+                            Garment Length
+
+                            <input
+                                type="number"
+                                name="length"
+                                placeholder="e.g. 145"
+                                required
+                            >
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- FABRIC -->
+
+                <div class="form-section">
+
+                    <h3>
+                        Choose your fabric
+                    </h3>
+
+
+                    <div class="fabric-options">
+
+                        <label class="fabric-option">
+
+                            <input
+                                type="radio"
+                                name="fabric"
+                                value="Standard"
+                                data-extra="0"
+                                checked
+                            >
+
+                            <span>
+                                Standard
+                            </span>
+
+                            <small>
+                                Included
+                            </small>
+
+                        </label>
+
+
+                        <label class="fabric-option">
+
+                            <input
+                                type="radio"
+                                name="fabric"
+                                value="Premium"
+                                data-extra="10000"
+                            >
+
+                            <span>
+                                Premium
+                            </span>
+
+                            <small>
+                                +10,000 XAF
+                            </small>
+
+                        </label>
+
+
+                        <label class="fabric-option">
+
+                            <input
+                                type="radio"
+                                name="fabric"
+                                value="Luxury"
+                                data-extra="20000"
+                            >
+
+                            <span>
+                                Luxury
+                            </span>
+
+                            <small>
+                                +20,000 XAF
+                            </small>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COLOUR -->
+
+                <div class="form-section">
+
+                    <h3>
+                        Choose your colour
+                    </h3>
+
+
+                    <div class="colour-options">
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="colour"
+                                value="Burgundy"
+                                checked
+                            >
+
+                            <span
+                                class="colour-circle burgundy"
+                            ></span>
+
+                            Burgundy
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="colour"
+                                value="Black"
+                            >
+
+                            <span
+                                class="colour-circle black"
+                            ></span>
+
+                            Black
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="colour"
+                                value="Cream"
+                            >
+
+                            <span
+                                class="colour-circle cream"
+                            ></span>
+
+                            Cream
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="colour"
+                                value="Custom"
+                            >
+
+                            <span
+                                class="colour-circle custom"
+                            ></span>
+
+                            Custom
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OPTIONAL -->
+
+                <div class="form-section">
+
+                    <h3>
+                        Optional finishing
+                    </h3>
+
+
+                    <label class="checkbox-option">
+
+                        <input
+                            type="checkbox"
+                            name="lining"
+                            data-extra="5000"
+                        >
+
+                        <span>
+                            Full lining
+                        </span>
+
+                        <strong>
+                            +5,000 XAF
+                        </strong>
+
+                    </label>
+
+
+                    <label class="checkbox-option">
+
+                        <input
+                            type="checkbox"
+                            name="rush"
+                            data-extra="15000"
+                        >
+
+                        <span>
+                            Priority production
+                        </span>
+
+                        <strong>
+                            +15,000 XAF
+                        </strong>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- CLIENT INFORMATION -->
+
+                <div class="form-section">
+
+                    <h3>
+                        Your information
+                    </h3>
+
+
+                    <div class="contact-grid">
+
+                        <label>
+                            Full name
+
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Your name"
+                                required
+                            >
+                        </label>
+
+
+                        <label>
+                            WhatsApp / Phone
+
+                            <input
+                                type="tel"
+                                name="phone"
+                                placeholder="+240 ..."
+                                required
+                            >
+                        </label>
+
+
+                        <label>
+                            Email
+
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Optional"
+                            >
+                        </label>
+
+                    </div>
+
+
+                    <label class="message-field">
+
+                        Special request
+
+                        <textarea
+                            name="notes"
+                            rows="5"
+                            placeholder="Tell us anything important about your order..."
+                        ></textarea>
+
+                    </label>
+
+                </div>
+
+            </form>
+
+
+
+            <!-- ================= ESTIMATE ================= -->
+
+            <aside class="estimate">
+
+                <p class="small-title">
+                    YOUR ESTIMATE
+                </p>
+
+
+                <div class="selected-design">
+
+                    <img
+                        id="estimateImage"
+                        src="dresses.png"
+                        alt="Selected design"
+                    >
+
+                    <div>
+
+                        <small>
+                            Selected design
+                        </small>
+
+                        <h3 id="designName">
+                            Evening Dress
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="estimate-row">
+
+                    <span>
+                        Estimated price
+                    </span>
+
+                    <strong id="price">
+                        65,000 XAF
+                    </strong>
+
+                </div>
+
+
+                <div class="estimate-row">
+
+                    <span>
+                        Estimated completion
+                    </span>
+
+                    <strong id="completion">
+                        7–10 working days
+                    </strong>
+
+                </div>
+
+
+                <p class="estimate-note">
+
+                    This is an estimated price.
+                    We will confirm the final price and
+                    production date before production begins.
+
+                </p>
+
+
+                <button
+                    type="button"
+                    id="submitOrder"
+                    class="estimate-button"
+                >
+                    Request This Order
+                </button>
+
+
+                <p
+                    id="successMessage"
+                    class="success-message"
+                    hidden
+                >
+                    Thank you! Your order request has been received.
+
+                </p>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <strong>
+            Where Simple Meets Statement
+        </strong>
+
+        <span>
+            Custom clothing • Made to fit • Made for you
+        </span>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
