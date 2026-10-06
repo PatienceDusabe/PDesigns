@@ -1,0 +1,1029 @@
+/* =====================================
+   BASIC SETTINGS
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: #fbf8f6;
+
+    color: #211c1d;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 7vw;
+
+    background: rgba(251, 248, 246, 0.96);
+
+    border-bottom: 1px solid #e7dfdc;
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.logo-circle {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid #211c1d;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-style: italic;
+
+    font-size: 20px;
+}
+
+
+.logo h1 {
+
+    margin: 0 0 3px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+.logo p {
+
+    margin: 0;
+
+    color: #817879;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+}
+
+
+.header-button {
+
+    color: #211c1d;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+
+    min-height: 75vh;
+
+    padding: 100px 9vw;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 0.5fr;
+
+    align-items: end;
+
+    gap: 80px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #f6eceb,
+            #fbf8f6
+        );
+}
+
+
+.small-title {
+
+    margin: 0 0 15px;
+
+    color: #7d1739;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.18em;
+}
+
+
+.hero h2 {
+
+    margin: 0 0 25px;
+
+    font-size: clamp(48px, 7vw, 90px);
+
+    line-height: 0.95;
+
+    font-weight: 400;
+
+    letter-spacing: -0.04em;
+}
+
+
+.hero-description {
+
+    max-width: 570px;
+
+    color: #756d6f;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.main-button {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 15px 25px;
+
+    background: #211c1d;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.main-button:hover {
+
+    background: #7d1739;
+}
+
+
+.hero-steps {
+
+    border-left: 1px solid #211c1d;
+
+    padding-left: 25px;
+}
+
+
+.hero-steps div {
+
+    margin-bottom: 25px;
+}
+
+
+.hero-steps span {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #7d1739;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+}
+
+
+.hero-steps strong {
+
+    font-size: 19px;
+
+    font-weight: 400;
+}
+
+
+
+/* =====================================
+   GENERAL SECTIONS
+===================================== */
+
+.section {
+
+    padding: 90px 7vw;
+
+    border-top: 1px solid #e7dfdc;
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    gap: 40px;
+
+    margin-bottom: 40px;
+}
+
+
+.section-heading h2 {
+
+    margin: 0;
+
+    font-size: 45px;
+
+    font-weight: 400;
+}
+
+
+.section-heading > p {
+
+    max-width: 430px;
+
+    margin: 0;
+
+    color: #756d6f;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =====================================
+   DESIGN CARDS
+===================================== */
+
+.design-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.design-card {
+
+    padding: 0;
+
+    background: white;
+
+    border: 1px solid #e7dfdc;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    color: #211c1d;
+}
+
+
+.design-card:hover {
+
+    border-color: #7d1739;
+}
+
+
+.design-card.selected {
+
+    border: 2px solid #7d1739;
+}
+
+
+.design-image {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: #eee;
+}
+
+
+.design-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.selected-label {
+
+    display: none;
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    padding: 8px 12px;
+
+    background: #7d1739;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+
+.design-card.selected .selected-label {
+
+    display: block;
+}
+
+
+.design-information {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+
+.design-information h3 {
+
+    margin: 0 0 5px;
+
+    font-size: 22px;
+
+    font-weight: 400;
+}
+
+
+.design-information p {
+
+    margin: 0;
+
+    color: #756d6f;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+
+.design-information > span {
+
+    white-space: nowrap;
+
+    color: #756d6f;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+
+
+/* =====================================
+   CUSTOMIZATION
+===================================== */
+
+.customization {
+
+    background: white;
+}
+
+
+.customization-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(300px, 0.7fr);
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+
+
+/* =====================================
+   FORM
+===================================== */
+
+.form-section {
+
+    padding: 30px 0;
+
+    border-top: 1px solid #e7dfdc;
+}
+
+
+.form-section h3 {
+
+    margin: 0 0 7px;
+
+    font-size: 22px;
+
+    font-weight: 400;
+}
+
+
+.hint {
+
+    margin: 0 0 20px;
+
+    color: #756d6f;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+
+.measurement-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+label {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+}
+
+
+input[type="number"],
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 7px;
+
+    padding: 12px;
+
+    background: white;
+
+    border: 1px solid #d8cfcc;
+
+    outline: none;
+}
+
+
+input:focus,
+textarea:focus {
+
+    border-color: #7d1739;
+}
+
+
+
+/* =====================================
+   FABRIC
+===================================== */
+
+.fabric-options {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.fabric-option {
+
+    cursor: pointer;
+}
+
+
+.fabric-option input {
+
+    position: absolute;
+
+    opacity: 0;
+}
+
+
+.fabric-option span {
+
+    display: block;
+
+    padding: 15px;
+
+    border: 1px solid #e7dfdc;
+
+    font-size: 16px;
+}
+
+
+.fabric-option small {
+
+    display: block;
+
+    padding: 9px 15px;
+
+    border: 1px solid #e7dfdc;
+
+    border-top: none;
+
+    color: #756d6f;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.fabric-option input:checked + span {
+
+    background: #fbf0f3;
+
+    border-color: #7d1739;
+}
+
+
+
+/* =====================================
+   COLOURS
+===================================== */
+
+.colour-options {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+
+.colour-options label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+
+.colour-options input {
+
+    display: none;
+}
+
+
+.colour-circle {
+
+    width: 25px;
+
+    height: 25px;
+
+    border-radius: 50%;
+
+    border: 1px solid #aaa;
+}
+
+
+.burgundy {
+
+    background: #7d1739;
+}
+
+
+.black {
+
+    background: #171717;
+}
+
+
+.cream {
+
+    background: #e9dcc8;
+}
+
+
+.custom {
+
+    background:
+        conic-gradient(
+            #e44,
+            #fd4,
+            #4b8,
+            #4cf,
+            #a6f,
+            #e48,
+            #e44
+        );
+}
+
+
+.colour-options input:checked + .colour-circle {
+
+    outline: 2px solid #211c1d;
+
+    outline-offset: 3px;
+}
+
+
+
+/* =====================================
+   CHECKBOXES
+===================================== */
+
+.checkbox-option {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 0;
+}
+
+
+.checkbox-option strong {
+
+    margin-left: auto;
+
+    color: #756d6f;
+
+    font-weight: normal;
+}
+
+
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+.message-field {
+
+    display: block;
+
+    margin-top: 18px;
+}
+
+
+
+/* =====================================
+   PRICE ESTIMATE
+===================================== */
+
+.estimate {
+
+    position: sticky;
+
+    top: 100px;
+
+    padding: 30px;
+
+    background: #211c1d;
+
+    color: white;
+}
+
+
+.estimate .small-title {
+
+    color: #e6b3c3;
+}
+
+
+.selected-design {
+
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+    gap: 15px;
+
+    align-items: center;
+
+    padding-bottom: 25px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #51484a;
+}
+
+
+.selected-design img {
+
+    width: 80px;
+
+    height: 100px;
+
+    object-fit: cover;
+}
+
+
+.selected-design small {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #aaa;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+}
+
+
+.selected-design h3 {
+
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 400;
+}
+
+
+.estimate-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+}
+
+
+.estimate-row strong {
+
+    font-family: Georgia, serif;
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+
+.estimate-note {
+
+    margin: 20px 0;
+
+    color: #bdb5b6;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+
+.estimate-button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    background: white;
+
+    color: #211c1d;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.estimate-button:hover {
+
+    background: #f0d9e0;
+}
+
+
+.success-message {
+
+    color: #cce8d0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 35px 7vw;
+
+    border-top: 1px solid #e7dfdc;
+
+    color: #756d6f;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+}
+
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 800px) {
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding-top: 70px;
+    }
+
+
+    .hero-steps {
+
+        margin-top: 30px;
+    }
+
+
+    .section {
+
+        padding: 60px 5vw;
+    }
+
+
+    .section-heading {
+
+        display: block;
+    }
+
+
+    .section-heading > p {
+
+        margin-top: 15px;
+    }
+
+
+    .design-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .customization-layout {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .estimate {
+
+        position: static;
+    }
+
+
+    .measurement-grid,
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .fabric-options {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    footer {
+
+        display: block;
+    }
+
+}
