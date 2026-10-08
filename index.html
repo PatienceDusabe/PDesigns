@@ -2,1095 +2,1206 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <!-- Makes the website display properly on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>TUYO — Make It Yours</title>
+    <!-- Browser tab title -->
+    <title>TUYO | Make It Yours</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <!-- Main website stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- =====================================================
+         HEADER
+         Contains the logo, navigation and order button
+         ===================================================== -->
 
-<!-- ================= HEADER ================= -->
+    <header class="site-header">
 
-<header class="header">
+        <div class="header-container">
 
-    <a
-        href="#top"
-        class="brand"
-    >
+            <!-- Brand / Logo -->
+            <a href="#home" class="brand">
 
-        <div class="brand-mark">
-            <img src="designs/logo.jpg" alt= "TUYO logo">
-        </div>
+                <!-- Our actual logo image -->
+                <div class="brand-logo">
+                    <img src="logo.jpg" alt="TUYO logo">
+                </div>
 
-        <div>
+                <!-- Brand name and tagline -->
+                <div class="brand-text">
+                    <h1>TUYO</h1>
+                    <p>MAKE IT YOURS</p>
+                </div>
 
-            <h1>TUYO</h1>
-
-            <p>MAKE IT YOURS</p>
-
-        </div>
-
-    </a>
-
-
-    <nav class="navigation">
-
-        <a href="#designs">
-            Designs
-        </a>
-
-        <a href="#how-it-works">
-            How It Works
-        </a>
-
-        <a href="#measurements">
-            Measurements
-        </a>
-
-    </nav>
-
-
-    <a
-        href="#order"
-        class="header-button"
-    >
-        Start an Order
-    </a>
-
-</header>
-
-
-
-<!-- ================= HERO ================= -->
-
-<main id="top">
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <p class="small-title">
-            PERSONALIZED CLOTHING
-        </p>
-
-
-        <h2>
-            Choose a design.<br>
-            Make it yours.
-        </h2>
-
-
-        <p class="hero-description">
-
-            Browse our sample designs, choose the one
-            you love, customize it to your preferences,
-            provide your measurements, and let us make
-            it for you.
-
-        </p>
-
-
-        <div class="hero-actions">
-
-            <a
-                href="#designs"
-                class="main-button"
-            >
-                Explore Designs
             </a>
 
 
-            <a
-                href="#how-it-works"
-                class="secondary-button"
-            >
-                How It Works
+            <!-- Main navigation -->
+            <nav class="main-nav">
+
+                <a href="#designs">Designs</a>
+
+                <a href="#how-it-works">How It Works</a>
+
+                <a href="#measurements">Measurements</a>
+
+            </nav>
+
+
+            <!-- Main action button -->
+            <a href="#order" class="header-button">
+                Start an Order
             </a>
 
         </div>
 
-    </div>
+    </header>
 
 
 
-    <div class="hero-message">
+    <!-- =====================================================
+         MAIN WEBSITE CONTENT
+         ===================================================== -->
 
-        <p>
-            Your style.
-        </p>
+    <main>
 
-        <p>
-            Your measurements.
-        </p>
 
-        <p>
-            Your piece.
-        </p>
+        <!-- =================================================
+             HERO SECTION
+             First section visitors see
+             ================================================= -->
 
-    </div>
+        <section id="home" class="hero">
 
-</section>
+            <div class="container hero-container">
 
+                <!-- Hero text -->
+                <div class="hero-content">
 
+                    <p class="eyebrow">
+                        PERSONALIZED CLOTHING
+                    </p>
 
-<!-- ================= HOW IT WORKS ================= -->
+                    <h2>
+                        Choose a design.
+                        <span>Make it yours.</span>
+                    </h2>
 
-<section
-    class="section process-section"
-    id="how-it-works"
->
+                    <p class="hero-description">
+                        Browse our sample designs, choose the one you love,
+                        customize the details, provide your measurements,
+                        and let us create a piece made around you.
+                    </p>
 
-    <div class="section-heading">
 
-        <div>
+                    <!-- Hero buttons -->
+                    <div class="hero-buttons">
 
-            <p class="small-title">
-                THE TUYO EXPERIENCE
-            </p>
+                        <a href="#designs" class="button button-primary">
+                            Explore Designs
+                        </a>
 
-            <h2>
-                Fashion made around you.
-            </h2>
+                        <a href="#how-it-works" class="button button-secondary">
+                            How It Works
+                        </a>
 
-        </div>
+                    </div>
 
+                </div>
 
-        <p>
 
-            No need to search through different shops
-            or explain your idea from scratch. Start
-            with a design you already love.
+                <!-- Hero message -->
+                <div class="hero-message">
 
-        </p>
+                    <p>Your style.</p>
+                    <p>Your measurements.</p>
+                    <p>Your piece.</p>
 
-    </div>
-
-
-
-    <div class="process-grid">
-
-
-        <div class="process-card">
-
-            <span>
-                01
-            </span>
-
-            <h3>
-                Choose
-            </h3>
-
-            <p>
-                Browse our sample designs and choose
-                a style that speaks to you.
-            </p>
-
-        </div>
-
-
-
-        <div class="process-card">
-
-            <span>
-                02
-            </span>
-
-            <h3>
-                Customize
-            </h3>
-
-            <p>
-                Choose your preferred colour, fabric,
-                length and other details.
-            </p>
-
-        </div>
-
-
-
-        <div class="process-card">
-
-            <span>
-                03
-            </span>
-
-            <h3>
-                Measure
-            </h3>
-
-            <p>
-                Follow our simple measurement guide
-                and provide your measurements online.
-            </p>
-
-        </div>
-
-
-
-        <div class="process-card">
-
-            <span>
-                04
-            </span>
-
-            <h3>
-                Receive
-            </h3>
-
-            <p>
-                We confirm your order, make your piece
-                and arrange delivery.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= DESIGNS ================= -->
-
-<section
-    class="section"
-    id="designs"
->
-
-    <div class="section-heading">
-
-        <div>
-
-            <p class="small-title">
-                EXPLORE
-            </p>
-
-            <h2>
-                Find a design.
-            </h2>
-
-        </div>
-
-
-        <p>
-
-            These designs are our starting points.
-            Choose one and we'll create a version
-            customized for you.
-
-        </p>
-
-    </div>
-
-
-
-    <div class="design-grid">
-
-
-        <!-- DESIGN 1 -->
-
-        <button
-            type="button"
-            class="design-card selected"
-            data-design="Evening Dress"
-            data-price="65000"
-            data-days="7"
-            data-image="designs/dresses.png"
-        >
-
-            <div class="design-image">
-
-                <img
-                    src="designs/dresses.png"
-                    alt="Evening dress sample design"
-                >
-
-                <span class="selected-label">
-                    Selected
-                </span>
+                </div>
 
             </div>
 
+        </section>
 
-            <div class="design-information">
 
-                <div>
 
-                    <h3>
-                        Evening Dress
-                    </h3>
+        <!-- =================================================
+             HOW IT WORKS
+             Explains the customer journey
+             ================================================= -->
+
+        <section id="how-it-works" class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        HOW IT WORKS
+                    </p>
+
+                    <h2>
+                        From idea to your finished piece.
+                    </h2>
 
                     <p>
-                        Elegant fitted silhouette
+                        The process is simple. Choose a design,
+                        personalize it, provide your measurements,
+                        and we'll take it from there.
                     </p>
 
                 </div>
 
 
-                <span>
-                    From 65,000 XAF
-                </span>
+                <!-- Four steps -->
+                <div class="steps-grid">
+
+
+                    <!-- Step 1 -->
+                    <article class="step-card">
+
+                        <span class="step-number">01</span>
+
+                        <h3>Choose</h3>
+
+                        <p>
+                            Start with one of our sample designs
+                            as the foundation for your piece.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Step 2 -->
+                    <article class="step-card">
+
+                        <span class="step-number">02</span>
+
+                        <h3>Customize</h3>
+
+                        <p>
+                            Choose your fabric, colour and
+                            other details to make the design yours.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Step 3 -->
+                    <article class="step-card">
+
+                        <span class="step-number">03</span>
+
+                        <h3>Measure</h3>
+
+                        <p>
+                            Take your measurements at home using
+                            our simple measurement guidance.
+                        </p>
+
+                    </article>
+
+
+                    <!-- Step 4 -->
+                    <article class="step-card">
+
+                        <span class="step-number">04</span>
+
+                        <h3>Receive</h3>
+
+                        <p>
+                            Once your order is confirmed and made,
+                            your personalized piece is ready for you.
+                        </p>
+
+                    </article>
+
+                </div>
 
             </div>
 
-        </button>
+        </section>
 
 
 
-        <!-- DESIGN 2 -->
+        <!-- =================================================
+             DESIGNS SECTION
+             Customers choose their starting design here
+             ================================================= -->
 
-        <button
-            type="button"
-            class="design-card"
-            data-design="African Print Jumpsuit"
-            data-price="70000"
-            data-days="8"
-            data-image="designs/jumpsuits.png"
-        >
+        <section id="designs" class="section section-light">
 
-            <div class="design-image">
+            <div class="container">
 
-                <img
-                    src="designs/jumpsuits.png"
-                    alt="African print jumpsuit sample design"
-                >
+                <div class="section-heading">
 
-                <span class="selected-label">
-                    Selected
-                </span>
+                    <p class="eyebrow">
+                        OUR DESIGNS
+                    </p>
 
-            </div>
-
-
-            <div class="design-information">
-
-                <div>
-
-                    <h3>
-                        African Print Jumpsuit
-                    </h3>
+                    <h2>
+                        Find a design.
+                    </h2>
 
                     <p>
-                        Statement print with tailored fit
+                        These designs are starting points.
+                        Your final piece can be customized around you.
                     </p>
 
                 </div>
 
 
-                <span>
-                    From 70,000 XAF
-                </span>
+                <!-- Design cards -->
+                <div class="designs-grid">
+
+
+                    <!-- ================================
+                         DESIGN 1
+                         To add another design later,
+                         copy this card and change:
+                         - name
+                         - price
+                         - days
+                         - image
+                         ================================ -->
+
+                    <article
+                        class="design-card selected"
+                        data-name="Evening Dress"
+                        data-price="65000"
+                        data-days="7"
+                        data-image="designs/dresses.png"
+                    >
+
+                        <div class="design-image">
+
+                            <img
+                                src="designs/dresses.png"
+                                alt="Evening Dress design"
+                            >
+
+                        </div>
+
+                        <div class="design-info">
+
+                            <div>
+
+                                <h3>Evening Dress</h3>
+
+                                <p>
+                                    Elegant and customizable.
+                                </p>
+
+                            </div>
+
+                            <div class="design-details">
+
+                                <span>
+                                    From 65,000 XAF
+                                </span>
+
+                                <span>
+                                    7 days
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ================================
+                         DESIGN 2
+                         ================================ -->
+
+                    <article
+                        class="design-card"
+                        data-name="African Print Jumpsuit"
+                        data-price="70000"
+                        data-days="8"
+                        data-image="designs/jumpsuits.png"
+                    >
+
+                        <div class="design-image">
+
+                            <img
+                                src="designs/jumpsuits.png"
+                                alt="African Print Jumpsuit design"
+                            >
+
+                        </div>
+
+                        <div class="design-info">
+
+                            <div>
+
+                                <h3>African Print Jumpsuit</h3>
+
+                                <p>
+                                    Statement style with a personalized fit.
+                                </p>
+
+                            </div>
+
+                            <div class="design-details">
+
+                                <span>
+                                    From 70,000 XAF
+                                </span>
+
+                                <span>
+                                    8 days
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
 
             </div>
 
-        </button>
+        </section>
 
-    </div>
 
-</section>
 
+        <!-- =================================================
+             MEASUREMENTS SECTION
+             Explains how customers measure themselves
+             ================================================= -->
 
+        <section id="measurements" class="section">
 
-<!-- ================= MEASUREMENTS ================= -->
+            <div class="container measurements-container">
 
-<section
-    class="section measurement-guide"
-    id="measurements"
->
 
-    <div class="measurement-guide-content">
+                <!-- Measurement explanation -->
+                <div class="measurement-content">
 
-        <p class="small-title">
-            BEFORE YOU ORDER
-        </p>
+                    <p class="eyebrow">
+                        YOUR MEASUREMENTS
+                    </p>
 
+                    <h2>
+                        Your measurements,
+                        made simple.
+                    </h2>
 
-        <h2>
-            Your measurements,
-            made simple.
-        </h2>
+                    <p>
+                        You don't need to visit a tailor just to
+                        provide your measurements. You can measure
+                        yourself at home using a flexible measuring tape.
+                    </p>
 
+                    <p>
+                        Use centimetres (cm) and keep the tape
+                        comfortably against your body without
+                        pulling it too tightly.
+                    </p>
 
-        <p>
 
-            You don't need to visit a shop just to
-            provide your measurements. We'll guide
-            you through each measurement and explain
-            exactly where and how to measure.
+                    <!-- Button scrolls to measurement list -->
+                    <button
+                        type="button"
+                        id="measurementGuideButton"
+                        class="button button-primary"
+                    >
+                        View Measurement Guide
+                    </button>
 
-        </p>
+                </div>
 
 
-        <div class="measurement-points">
+                <!-- Measurement guide -->
+                <div class="measurement-guide" id="measurementGuide">
 
-            <span>
-                ✓ Simple instructions
-            </span>
+                    <h3>
+                        Measurements we need
+                    </h3>
 
-            <span>
-                ✓ Measurements in centimetres
-            </span>
 
-            <span>
-                ✓ Measure yourself at home
-            </span>
+                    <!-- Measurement item -->
+                    <div class="measurement-item">
 
-        </div>
+                        <strong>Height</strong>
 
-
-        <button
-            type="button"
-            class="outline-button"
-            id="measurementGuideButton"
-        >
-            View Measurement Guide
-        </button>
-
-    </div>
-
-
-    <div class="measurement-preview">
-
-        <div>
-
-            <span>
-                HEIGHT
-            </span>
-
-            <strong>
-                174 cm
-            </strong>
-
-        </div>
-
-
-        <div>
-
-            <span>
-                CHEST / BUST
-            </span>
-
-            <strong>
-                92 cm
-            </strong>
-
-        </div>
-
-
-        <div>
-
-            <span>
-                WAIST
-            </span>
-
-            <strong>
-                76 cm
-            </strong>
-
-        </div>
-
-
-        <div>
-
-            <span>
-                HIPS
-            </span>
-
-            <strong>
-                102 cm
-            </strong>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= ORDER ================= -->
-
-<section
-    class="section customization"
-    id="order"
->
-
-    <div class="section-heading">
-
-        <div>
-
-            <p class="small-title">
-                YOUR ORDER
-            </p>
-
-            <h2>
-                Make it yours.
-            </h2>
-
-        </div>
-
-
-        <p>
-
-            Tell us how you'd like your selected
-            design made. We'll confirm the final
-            details before production begins.
-
-        </p>
-
-    </div>
-
-
-
-    <div class="customization-layout">
-
-
-        <!-- ================= FORM ================= -->
-
-        <form id="orderForm">
-
-
-            <!-- MEASUREMENTS -->
-
-            <div class="form-section">
-
-                <div class="form-title-row">
-
-                    <div>
-
-                        <h3>
-                            Your measurements
-                        </h3>
-
-                        <p class="hint">
-                            Enter your measurements in centimetres.
+                        <p>
+                            Measure from the top of your head
+                            to the floor while standing straight.
                         </p>
 
                     </div>
 
 
-                    <a href="#measurements">
-                        Measurement guide
+                    <div class="measurement-item">
+
+                        <strong>Chest / Bust</strong>
+
+                        <p>
+                            Measure around the fullest part
+                            of your chest or bust.
+                        </p>
+
+                    </div>
+
+
+                    <div class="measurement-item">
+
+                        <strong>Waist</strong>
+
+                        <p>
+                            Measure around the narrowest part
+                            of your natural waist.
+                        </p>
+
+                    </div>
+
+
+                    <div class="measurement-item">
+
+                        <strong>Hips</strong>
+
+                        <p>
+                            Measure around the fullest part
+                            of your hips.
+                        </p>
+
+                    </div>
+
+
+                    <div class="measurement-item">
+
+                        <strong>Shoulder</strong>
+
+                        <p>
+                            Measure from one shoulder point
+                            to the other.
+                        </p>
+
+                    </div>
+
+
+                    <div class="measurement-item">
+
+                        <strong>Sleeve Length</strong>
+
+                        <p>
+                            Measure from the shoulder point
+                            down to where you want the sleeve to end.
+                        </p>
+
+                    </div>
+
+
+                    <div class="measurement-item">
+
+                        <strong>Garment Length</strong>
+
+                        <p>
+                            Measure from the desired starting point
+                            to where you want the garment to end.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ORDER SECTION
+             Main customer order/customization form
+             ================================================= -->
+
+        <section id="order" class="section section-light">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="eyebrow">
+                        START YOUR ORDER
+                    </p>
+
+                    <h2>
+                        Make the design yours.
+                    </h2>
+
+                    <p>
+                        Select your preferences and provide your
+                        measurements. The summary will update automatically.
+                    </p>
+
+                </div>
+
+
+                <!-- Order layout -->
+                <div class="order-layout">
+
+
+                    <!-- ======================================
+                         ORDER FORM
+                         ====================================== -->
+
+                    <form id="orderForm" class="order-form">
+
+
+                        <!-- ==============================
+                             MEASUREMENTS
+                             ============================== -->
+
+                        <div class="form-section">
+
+                            <h3>1. Your Measurements</h3>
+
+                            <p class="form-note">
+                                Please enter your measurements in centimetres (cm).
+                            </p>
+
+
+                            <div class="form-grid">
+
+
+                                <div class="form-group">
+
+                                    <label for="height">
+                                        Height (cm)
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="height"
+                                        name="height"
+                                        min="50"
+                                        max="250"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="chest">
+                                        Chest / Bust (cm)
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="chest"
+                                        name="chest"
+                                        min="40"
+                                        max="200"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="waist">
+                                        Waist (cm)
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="waist"
+                                        name="waist"
+                                        min="40"
+                                        max="200"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="hips">
+                                        Hips (cm)
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="hips"
+                                        name="hips"
+                                        min="40"
+                                        max="200"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="shoulder">
+                                        Shoulder (cm)
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="shoulder"
+                                        name="shoulder"
+                                        min="20"
+                                        max="100"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="sleeve">
+                                        Sleeve Length (cm)
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="sleeve"
+                                        name="sleeve"
+                                        min="0"
+                                        max="150"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="garmentLength">
+                                        Garment Length (cm)
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        id="garmentLength"
+                                        name="garmentLength"
+                                        min="20"
+                                        max="250"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <a href="#measurements" class="measurement-link">
+                                Need help with measurements?
+                            </a>
+
+                        </div>
+
+
+
+                        <!-- ==============================
+                             FABRIC
+                             ============================== -->
+
+                        <div class="form-section">
+
+                            <h3>2. Choose Your Fabric</h3>
+
+                            <div class="option-grid">
+
+
+                                <label class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        name="fabric"
+                                        value="Standard"
+                                        data-extra="0"
+                                        checked
+                                    >
+
+                                    <span class="option-name">
+                                        Standard
+                                    </span>
+
+                                    <span class="option-price">
+                                        +0 XAF
+                                    </span>
+
+                                </label>
+
+
+                                <label class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        name="fabric"
+                                        value="Premium"
+                                        data-extra="10000"
+                                    >
+
+                                    <span class="option-name">
+                                        Premium
+                                    </span>
+
+                                    <span class="option-price">
+                                        +10,000 XAF
+                                    </span>
+
+                                </label>
+
+
+                                <label class="option-card">
+
+                                    <input
+                                        type="radio"
+                                        name="fabric"
+                                        value="Luxury"
+                                        data-extra="20000"
+                                    >
+
+                                    <span class="option-name">
+                                        Luxury
+                                    </span>
+
+                                    <span class="option-price">
+                                        +20,000 XAF
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ==============================
+                             COLOUR
+                             ============================== -->
+
+                        <div class="form-section">
+
+                            <h3>3. Choose Your Colour</h3>
+
+                            <div class="color-options">
+
+
+                                <label class="color-option">
+
+                                    <input
+                                        type="radio"
+                                        name="color"
+                                        value="Burgundy"
+                                        checked
+                                    >
+
+                                    <span class="color-circle color-burgundy"></span>
+
+                                    <span>Burgundy</span>
+
+                                </label>
+
+
+                                <label class="color-option">
+
+                                    <input
+                                        type="radio"
+                                        name="color"
+                                        value="Black"
+                                    >
+
+                                    <span class="color-circle color-black"></span>
+
+                                    <span>Black</span>
+
+                                </label>
+
+
+                                <label class="color-option">
+
+                                    <input
+                                        type="radio"
+                                        name="color"
+                                        value="Cream"
+                                    >
+
+                                    <span class="color-circle color-cream"></span>
+
+                                    <span>Cream</span>
+
+                                </label>
+
+
+                                <label class="color-option">
+
+                                    <input
+                                        type="radio"
+                                        name="color"
+                                        value="Custom"
+                                    >
+
+                                    <span class="color-circle color-custom"></span>
+
+                                    <span>Custom</span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ==============================
+                             OPTIONAL EXTRAS
+                             ============================== -->
+
+                        <div class="form-section">
+
+                            <h3>4. Optional Extras</h3>
+
+
+                            <label class="checkbox-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="lining"
+                                    id="lining"
+                                    data-extra="5000"
+                                >
+
+                                <span>
+                                    Full lining
+                                </span>
+
+                                <strong>
+                                    +5,000 XAF
+                                </strong>
+
+                            </label>
+
+
+                            <label class="checkbox-option">
+
+                                <input
+                                    type="checkbox"
+                                    name="priority"
+                                    id="priority"
+                                    data-extra="15000"
+                                >
+
+                                <span>
+                                    Priority production
+                                </span>
+
+                                <strong>
+                                    +15,000 XAF
+                                </strong>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- ==============================
+                             CONTACT INFORMATION
+                             ============================== -->
+
+                        <div class="form-section">
+
+                            <h3>5. Your Contact Details</h3>
+
+
+                            <div class="form-grid">
+
+
+                                <div class="form-group">
+
+                                    <label for="fullName">
+                                        Full Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="fullName"
+                                        name="fullName"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="phone">
+                                        WhatsApp / Phone
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="email">
+                                        Email
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group full-width">
+
+                                    <label for="specialRequest">
+                                        Special Request
+                                    </label>
+
+                                    <textarea
+                                        id="specialRequest"
+                                        name="specialRequest"
+                                        rows="4"
+                                        placeholder="Anything else you would like us to know?"
+                                    ></textarea>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Form button -->
+                        <button
+                            type="submit"
+                            class="button button-primary form-submit"
+                        >
+                            Request This Order
+                        </button>
+
+                    </form>
+
+
+
+                    <!-- ======================================
+                         ORDER SUMMARY
+                         ====================================== -->
+
+                    <aside class="order-summary">
+
+                        <p class="summary-label">
+                            ORDER SUMMARY
+                        </p>
+
+
+                        <!-- Selected design image -->
+                        <div class="summary-image">
+
+                            <img
+                                id="summaryImage"
+                                src="designs/dresses.png"
+                                alt="Selected design"
+                            >
+
+                        </div>
+
+
+                        <h3 id="summaryDesign">
+                            Evening Dress
+                        </h3>
+
+
+                        <div class="summary-row">
+
+                            <span>Starting price</span>
+
+                            <strong id="summaryBasePrice">
+                                65,000 XAF
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>Estimated total</span>
+
+                            <strong id="summaryPrice">
+                                65,000 XAF
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>Estimated completion</span>
+
+                            <strong id="summaryDays">
+                                7–9 days
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-note">
+
+                            This is an estimate, not a final quotation.
+                            We will confirm the final details before production.
+
+                        </div>
+
+
+                        <!-- Success message appears here after submission -->
+                        <div
+                            id="successMessage"
+                            class="success-message"
+                            hidden
+                        >
+                            Your order request has been received.
+                            We will contact you to confirm the details.
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTACT SECTION
+             Keep actual social links easy to update later
+             ================================================= -->
+
+        <section id="contact" class="section contact-section">
+
+            <div class="container contact-container">
+
+                <div>
+
+                    <p class="eyebrow">
+                        GET IN TOUCH
+                    </p>
+
+                    <h2>
+                        Have a question?
+                    </h2>
+
+                    <p>
+                        Contact us if you need help choosing a design,
+                        understanding measurements, or placing an order.
+                    </p>
+
+                </div>
+
+
+                <!--
+                    IMPORTANT:
+                    Replace the # values below with the real links
+                    when the business social accounts are ready.
+                -->
+
+                <div class="social-links">
+
+                    <!-- Replace # with the WhatsApp link -->
+                    <a href="#" target="_blank">
+                        WhatsApp
+                    </a>
+
+                    <!-- Replace # with the Instagram link -->
+                    <a href="#" target="_blank">
+                        Instagram
+                    </a>
+
+                    <!-- Replace # with the Facebook link -->
+                    <a href="#" target="_blank">
+                        Facebook
+                    </a>
+
+                    <!-- Replace # with the TikTok link -->
+                    <a href="#" target="_blank">
+                        TikTok
                     </a>
 
                 </div>
 
+            </div>
 
-                <div class="measurement-grid">
+        </section>
 
-                    <label>
-
-                        Height
-
-                        <input
-                            type="number"
-                            name="height"
-                            placeholder="e.g. 174"
-                            required
-                        >
-
-                    </label>
+    </main>
 
 
-                    <label>
 
-                        Chest / Bust
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
 
-                        <input
-                            type="number"
-                            name="bust"
-                            placeholder="e.g. 92"
-                            required
-                        >
+    <footer class="site-footer">
 
-                    </label>
+        <div class="container footer-container">
 
+            <div>
 
-                    <label>
+                <h2>TUYO</h2>
 
-                        Waist
-
-                        <input
-                            type="number"
-                            name="waist"
-                            placeholder="e.g. 76"
-                            required
-                        >
-
-                    </label>
-
-
-                    <label>
-
-                        Hips
-
-                        <input
-                            type="number"
-                            name="hips"
-                            placeholder="e.g. 102"
-                            required
-                        >
-
-                    </label>
-
-
-                    <label>
-
-                        Shoulder
-
-                        <input
-                            type="number"
-                            name="shoulder"
-                            placeholder="e.g. 38"
-                            required
-                        >
-
-                    </label>
-
-
-                    <label>
-
-                        Sleeve Length
-
-                        <input
-                            type="number"
-                            name="sleeve"
-                            placeholder="e.g. 60"
-                        >
-
-                    </label>
-
-
-                    <label>
-
-                        Garment Length
-
-                        <input
-                            type="number"
-                            name="length"
-                            placeholder="e.g. 145"
-                            required
-                        >
-
-                    </label>
-
-                </div>
+                <p>
+                    Make it yours.
+                </p>
 
             </div>
 
 
+            <div class="footer-right">
 
-            <!-- FABRIC -->
+                <p>
+                    Personalized clothing • Made around you
+                </p>
 
-            <div class="form-section">
-
-                <h3>
-                    Choose your fabric
-                </h3>
-
-
-                <div class="fabric-options">
-
-                    <label class="fabric-option">
-
-                        <input
-                            type="radio"
-                            name="fabric"
-                            value="Standard"
-                            data-extra="0"
-                            checked
-                        >
-
-                        <span>
-                            Standard
-                        </span>
-
-                        <small>
-                            Included
-                        </small>
-
-                    </label>
-
-
-                    <label class="fabric-option">
-
-                        <input
-                            type="radio"
-                            name="fabric"
-                            value="Premium"
-                            data-extra="10000"
-                        >
-
-                        <span>
-                            Premium
-                        </span>
-
-                        <small>
-                            +10,000 XAF
-                        </small>
-
-                    </label>
-
-
-                    <label class="fabric-option">
-
-                        <input
-                            type="radio"
-                            name="fabric"
-                            value="Luxury"
-                            data-extra="20000"
-                        >
-
-                        <span>
-                            Luxury
-                        </span>
-
-                        <small>
-                            +20,000 XAF
-                        </small>
-
-                    </label>
-
-                </div>
+                <p>
+                    © 2026 TUYO. All rights reserved.
+                </p>
 
             </div>
 
+        </div>
 
+    </footer>
 
-            <!-- COLOUR -->
 
-            <div class="form-section">
 
-                <h3>
-                    Choose your colour
-                </h3>
-
-
-                <div class="colour-options">
-
-                    <label>
-
-                        <input
-                            type="radio"
-                            name="colour"
-                            value="Burgundy"
-                            checked
-                        >
-
-                        <span class="colour-circle burgundy"></span>
-
-                        Burgundy
-
-                    </label>
-
-
-                    <label>
-
-                        <input
-                            type="radio"
-                            name="colour"
-                            value="Black"
-                        >
-
-                        <span class="colour-circle black"></span>
-
-                        Black
-
-                    </label>
-
-
-                    <label>
-
-                        <input
-                            type="radio"
-                            name="colour"
-                            value="Cream"
-                        >
-
-                        <span class="colour-circle cream"></span>
-
-                        Cream
-
-                    </label>
-
-
-                    <label>
-
-                        <input
-                            type="radio"
-                            name="colour"
-                            value="Custom"
-                        >
-
-                        <span class="colour-circle custom"></span>
-
-                        Custom
-
-                    </label>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- OPTIONAL -->
-
-            <div class="form-section">
-
-                <h3>
-                    Optional finishing
-                </h3>
-
-
-                <label class="checkbox-option">
-
-                    <input
-                        type="checkbox"
-                        name="lining"
-                        data-extra="5000"
-                    >
-
-                    <span>
-                        Full lining
-                    </span>
-
-                    <strong>
-                        +5,000 XAF
-                    </strong>
-
-                </label>
-
-
-                <label class="checkbox-option">
-
-                    <input
-                        type="checkbox"
-                        name="rush"
-                        data-extra="15000"
-                    >
-
-                    <span>
-                        Priority production
-                    </span>
-
-                    <strong>
-                        +15,000 XAF
-                    </strong>
-
-                </label>
-
-            </div>
-
-
-
-            <!-- CLIENT INFORMATION -->
-
-            <div class="form-section">
-
-                <h3>
-                    Your information
-                </h3>
-
-
-                <div class="contact-grid">
-
-                    <label>
-
-                        Full name
-
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Your name"
-                            required
-                        >
-
-                    </label>
-
-
-                    <label>
-
-                        WhatsApp / Phone
-
-                        <input
-                            type="tel"
-                            name="phone"
-                            placeholder="+240 ..."
-                            required
-                        >
-
-                    </label>
-
-
-                    <label>
-
-                        Email
-
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Optional"
-                        >
-
-                    </label>
-
-                </div>
-
-
-                <label class="message-field">
-
-                    Special request
-
-                    <textarea
-                        name="notes"
-                        rows="5"
-                        placeholder="Tell us anything important about your order..."
-                    ></textarea>
-
-                </label>
-
-            </div>
-
-        </form>
-
-
-
-        <!-- ================= ESTIMATE ================= -->
-
-        <aside class="estimate">
-
-            <p class="small-title">
-                ORDER SUMMARY
-            </p>
-
-
-            <div class="selected-design">
-
-                <img
-                    id="estimateImage"
-                    src="designs/dresses.png"
-                    alt="Selected design"
-                >
-
-
-                <div>
-
-                    <small>
-                        Design
-                    </small>
-
-                    <h3 id="designName">
-                        Evening Dress
-                    </h3>
-
-                </div>
-
-            </div>
-
-
-            <div class="estimate-row">
-
-                <span>
-                    Estimated price
-                </span>
-
-                <strong id="price">
-                    65,000 XAF
-                </strong>
-
-            </div>
-
-
-            <div class="estimate-row">
-
-                <span>
-                    Estimated completion
-                </span>
-
-                <strong id="completion">
-                    7–10 working days
-                </strong>
-
-            </div>
-
-
-            <p class="estimate-note">
-
-                This is an estimate, not a final quotation.
-                We'll review your request and confirm the
-                final price and production date before
-                production begins.
-
-            </p>
-
-
-            <button
-                type="button"
-                id="submitOrder"
-                class="estimate-button"
-            >
-                Request This Order
-            </button>
-
-
-            <p
-                id="successMessage"
-                class="success-message"
-                hidden
-            ></p>
-
-        </aside>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div>
-
-        <strong>
-            TUYO
-        </strong>
-
-        <span>
-            Make it yours.
-        </span>
-
-    </div>
-
-
-    <span>
-        Personalized clothing • Made around you
-    </span>
-
-</footer>
-
-
-</main>
-
-
-
-<script src="script.js"></script>
+    <!-- Main website JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 
