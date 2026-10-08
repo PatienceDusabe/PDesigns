@@ -1,85 +1,141 @@
-/* =====================================
-   GET ELEMENTS
-===================================== */
+/* =========================================================
+   TUYO WEBSITE JAVASCRIPT
+   ---------------------------------------------------------
+   This file controls the interactive parts of the website.
 
-const designCards =
-    document.querySelectorAll(".design-card");
-
-const form =
-    document.getElementById("orderForm");
-
-const priceElement =
-    document.getElementById("price");
-
-const completionElement =
-    document.getElementById("completion");
-
-const designNameElement =
-    document.getElementById("designName");
-
-const estimateImage =
-    document.getElementById("estimateImage");
-
-const submitButton =
-    document.getElementById("submitOrder");
-
-const successMessage =
-    document.getElementById("successMessage");
+   Main sections:
+   1. Select website elements
+   2. Selected design
+   3. Price calculation
+   4. Design selection
+   5. Form changes
+   6. Measurement guide
+   7. Order submission
+   ========================================================= */
 
 
+/* =========================================================
+   1. SELECT WEBSITE ELEMENTS
+   ========================================================= */
 
-/* =====================================
-   CURRENT DESIGN
-===================================== */
+/*
+   These variables connect JavaScript to elements
+   inside index.html.
+*/
+
+
+// Design cards
+const designCards = document.querySelectorAll(".design-card");
+
+
+// Order form
+const orderForm = document.getElementById("orderForm");
+
+
+// Order summary elements
+const summaryImage = document.getElementById("summaryImage");
+const summaryDesign = document.getElementById("summaryDesign");
+const summaryBasePrice = document.getElementById("summaryBasePrice");
+const summaryPrice = document.getElementById("summaryPrice");
+const summaryDays = document.getElementById("summaryDays");
+
+
+// Success message
+const successMessage = document.getElementById("successMessage");
+
+
+// Measurement guide button
+const measurementGuideButton = document.getElementById(
+    "measurementGuideButton"
+);
+
+
+// Measurement guide itself
+const measurementGuide = document.getElementById(
+    "measurementGuide"
+);
+
+
+
+/* =========================================================
+   2. SELECTED DESIGN
+   ========================================================= */
+
+/*
+   This object stores the design currently selected
+   by the customer.
+
+   The first design is selected when the page loads.
+*/
 
 let selectedDesign = {
-
     name: "Evening Dress",
-
     price: 65000,
-
     days: 7,
-
     image: "designs/dresses.png"
-
 };
 
 
 
-/* =====================================
-   FORMAT MONEY
-===================================== */
+/* =========================================================
+   3. HELPER FUNCTION: FORMAT MONEY
+   ========================================================= */
+
+/*
+   This function converts a number such as:
+
+       65000
+
+   into:
+
+       65,000 XAF
+
+   Keeping this in one function means we don't have
+   to repeat the same formatting code everywhere.
+*/
 
 function formatMoney(amount) {
 
-    return new Intl.NumberFormat("en-US")
-        .format(amount)
-        + " XAF";
+    return new Intl.NumberFormat("en-US").format(amount) + " XAF";
 
 }
 
 
 
-/* =====================================
-   UPDATE PRICE
-===================================== */
+/* =========================================================
+   4. UPDATE ORDER SUMMARY
+   ========================================================= */
+
+/*
+   This function calculates the estimated price
+   and completion time.
+
+   It runs whenever the customer changes an option.
+*/
 
 function updateEstimate() {
 
-    let totalPrice =
-        selectedDesign.price;
+    /* ---------------------------------------------
+       Start with the selected design's price
+       --------------------------------------------- */
+
+    let totalPrice = selectedDesign.price;
 
 
-    let extraDays = 0;
+    /* ---------------------------------------------
+       Start with the selected design's production time
+       --------------------------------------------- */
+
+    let minimumDays = selectedDesign.days;
 
 
+    /* ---------------------------------------------
+       Add selected fabric price
+       --------------------------------------------- */
 
-    /* ---------- FABRIC ---------- */
-
-    const selectedFabric =
-        form.querySelector(
-            'input[name="fabric"]:checked'
-        );
+    const selectedFabric = document.querySelector(
+        'input[name="fabric"]:checked'
+    );
 
 
     if (selectedFabric) {
@@ -91,201 +147,294 @@ function updateEstimate() {
     }
 
 
+    /* ---------------------------------------------
+       Add optional extras
+       --------------------------------------------- */
 
-    /* ---------- CHECKBOXES ---------- */
-
-    const checkedOptions =
-        form.querySelectorAll(
-            'input[type="checkbox"]:checked'
-        );
-
-
-    checkedOptions.forEach(option => {
-
-        totalPrice += Number(
-            option.dataset.extra
-        );
+    const extraOptions = document.querySelectorAll(
+        'input[type="checkbox"][data-extra]'
+    );
 
 
-        /*
-            Priority production makes
-            the production time shorter.
-        */
+    extraOptions.forEach(function (option) {
 
-        if (option.name === "rush") {
+        if (option.checked) {
 
-            extraDays -= 3;
+            totalPrice += Number(
+                option.dataset.extra
+            );
 
         }
 
     });
 
 
+    /* ---------------------------------------------
+       Priority production reduces the estimated
+       production time.
 
-    /* ---------- TIME ---------- */
+       Minimum production time is 4 days.
+       --------------------------------------------- */
 
-    let minimumDays =
-        selectedDesign.days + extraDays;
-
-
-    let maximumDays =
-        selectedDesign.days + extraDays + 3;
-
+    const priorityOption = document.getElementById("priority");
 
 
-    /*
-        Don't allow the website to show
-        an unrealistically short production time.
-    */
+    if (priorityOption.checked) {
 
-    minimumDays =
-        Math.max(4, minimumDays);
+        minimumDays -= 3;
 
+        if (minimumDays < 4) {
 
-    maximumDays =
-        Math.max(
-            minimumDays + 2,
-            maximumDays
-        );
+            minimumDays = 4;
+
+        }
+
+    }
 
 
+    /* ---------------------------------------------
+       Maximum estimate
 
-    /* ---------- DISPLAY ---------- */
+       We show a range such as:
 
-    priceElement.textContent =
+       7–9 days
+       --------------------------------------------- */
+
+    const maximumDays = minimumDays + 2;
+
+
+    /* ---------------------------------------------
+       Update the summary on the page
+       --------------------------------------------- */
+
+    summaryImage.src = selectedDesign.image;
+
+    summaryImage.alt = selectedDesign.name;
+
+    summaryDesign.textContent = selectedDesign.name;
+
+    summaryBasePrice.textContent =
+        formatMoney(selectedDesign.price);
+
+    summaryPrice.textContent =
         formatMoney(totalPrice);
 
-
-    completionElement.textContent =
-        `${minimumDays}–${maximumDays} working days`;
+    summaryDays.textContent =
+        minimumDays + "–" + maximumDays + " days";
 
 }
 
 
 
-/* =====================================
-   DESIGN SELECTION
-===================================== */
+/* =========================================================
+   5. DESIGN SELECTION
+   ========================================================= */
 
-designCards.forEach(card => {
+/*
+   Each design card contains information in HTML
+   data attributes:
 
-    card.addEventListener(
-        "click",
-        function() {
+       data-name
+       data-price
+       data-days
+       data-image
 
-
-            /* Remove previous selection */
-
-            designCards.forEach(
-                item =>
-                    item.classList.remove("selected")
-            );
-
-
-            /* Select clicked card */
-
-            card.classList.add("selected");
+   When the customer clicks a card, we read those
+   values and make that design the selected design.
+*/
 
 
-            /* Read information */
+designCards.forEach(function (card) {
 
-            selectedDesign = {
+    card.addEventListener("click", function () {
 
-                name:
-                    card.dataset.design,
+        /* -----------------------------------------
+           Remove "selected" from every card
+           ----------------------------------------- */
 
-                price:
-                    Number(card.dataset.price),
+        designCards.forEach(function (item) {
 
-                days:
-                    Number(card.dataset.days),
+            item.classList.remove("selected");
 
-                image:
-                    card.dataset.image
-
-            };
+        });
 
 
-            /* Update estimate */
+        /* -----------------------------------------
+           Mark the clicked card as selected
+           ----------------------------------------- */
 
-            designNameElement.textContent =
-                selectedDesign.name;
-
-
-            estimateImage.src =
-                selectedDesign.image;
+        card.classList.add("selected");
 
 
-            updateEstimate();
+        /* -----------------------------------------
+           Read design information from HTML
+           ----------------------------------------- */
 
-        }
-    );
+        selectedDesign = {
+
+            name: card.dataset.name,
+
+            price: Number(card.dataset.price),
+
+            days: Number(card.dataset.days),
+
+            image: card.dataset.image
+
+        };
+
+
+        /* -----------------------------------------
+           Update the order summary
+           ----------------------------------------- */
+
+        updateEstimate();
+
+
+        /* -----------------------------------------
+           Scroll to the order section
+
+           This makes it easier for the customer
+           to continue after choosing a design.
+           ----------------------------------------- */
+
+        document.getElementById("order").scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
 
 });
 
 
 
-/* =====================================
-   LISTEN FOR FORM CHANGES
-===================================== */
+/* =========================================================
+   6. WATCH FOR FORM CHANGES
+   ========================================================= */
 
-form.addEventListener(
-    "change",
-    updateEstimate
-);
-
-
-
-/* =====================================
-   SUBMIT ORDER
-===================================== */
-
-submitButton.addEventListener(
-    "click",
-    function() {
+/*
+   Whenever the customer changes fabric or
+   an optional extra, recalculate the estimate.
+*/
 
 
-        /*
-            Check required fields.
-        */
+orderForm.addEventListener("change", function () {
 
-        if (!form.reportValidity()) {
+    updateEstimate();
 
-            return;
-
-        }
+});
 
 
 
-        /*
-            FOR NOW:
-            We are only testing the interface.
+/* =========================================================
+   7. MEASUREMENT GUIDE
+   ========================================================= */
 
-            Later this button will send the
-            order to our database.
-        */
+/*
+   When the customer clicks "View Measurement Guide",
+   we scroll smoothly to the measurement guide.
 
-        successMessage.hidden = false;
-
-
-        successMessage.textContent =
-            "Thank you! Your order request has been received. We will contact you to confirm the final price and production date.";
+   We use JavaScript here instead of creating a complicated
+   pop-up or modal.
+*/
 
 
-        submitButton.textContent =
-            "Request Received";
+measurementGuideButton.addEventListener("click", function () {
+
+    measurementGuide.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+});
 
 
-        submitButton.disabled =
-            true;
+
+/* =========================================================
+   8. ORDER FORM SUBMISSION
+   ========================================================= */
+
+/*
+   For now, this website does NOT have a database.
+
+   So when the customer submits the form, we simply:
+
+   1. Check that required fields are completed.
+   2. Show a success message.
+   3. Change the button text.
+
+   Later we can connect this form to:
+   - a database
+   - WhatsApp
+   - email
+   - Google Sheets
+   - an admin dashboard
+   - or another order management system.
+*/
+
+
+orderForm.addEventListener("submit", function (event) {
+
+    /* Prevent the browser from refreshing the page */
+    event.preventDefault();
+
+
+    /* -----------------------------------------
+       Check the required fields
+       ----------------------------------------- */
+
+    if (!orderForm.reportValidity()) {
+
+        return;
 
     }
-);
+
+
+    /* -----------------------------------------
+       Show success message
+       ----------------------------------------- */
+
+    successMessage.hidden = false;
+
+
+    /* -----------------------------------------
+       Change button text
+       ----------------------------------------- */
+
+    const submitButton =
+        orderForm.querySelector('button[type="submit"]');
+
+
+    submitButton.textContent =
+        "Order Request Sent";
+
+
+    /* Prevent duplicate submissions for now */
+    submitButton.disabled = true;
+
+
+    /* -----------------------------------------
+       Scroll to the success message
+       ----------------------------------------- */
+
+    successMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+});
 
 
 
-/* =====================================
-   INITIAL CALCULATION
-===================================== */
+/* =========================================================
+   9. INITIAL PAGE SETUP
+   ========================================================= */
+
+/*
+   Run the price calculation once when the website
+   first loads.
+
+   This makes sure the order summary already contains
+   the correct starting information.
+*/
 
 updateEstimate();
